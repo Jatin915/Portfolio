@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="src/output.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./src/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans scroll-smooth m-0 p-0 box-border transition-">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 z-50 min-w-full min-h-16 shadow-xl flex justify-between items-center px-5"
+    >
+      <strong><h2 class="text-3xl">Jatin.dev</h2></strong>
+      <div id="navigations" class="sm:flex gap-8 hidden">
+        <p
+          onmouseleave="this.classList.remove('animate-bgFillUp'); this.classList.add('animate-bgFillDown')"
+          onmouseenter="this.classList.remove('animate-bgFillDown'); this.classList.add('animate-bgFillUp')"
+          class="cursor-pointer bg-gradient-to-t from-blue-500 to-blue-500 bg-[length:100%_0%] bg-bottom bg-no-repeat transition-[background-size] duration-500 ease-in-out"
+        >
+          Showcase
+        </p>
+        <p>About</p>
+        <p>Skills</p>
+        <p>Contact</p>
+      </div>
+
+      <button class="theme-toggle mt-1 ml-auto mr-6 sm:ml-0 sm:mr-0">
+        <i class="fa-solid fa-moon text-2xl"></i>
+      </button>
+
+      <div class="sm:hidden">
+        <span class="block w-6 h-1 bg-black mb-1"></span>
+        <span class="block w-6 h-1 bg-black"></span>
+        <span class="block w-6 h-1 bg-black mt-1"></span>
+      </div>
+    </nav>
+  </body>
 </html>
