@@ -1,28 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode:'class',
   content: ["*.html"],
   theme: {
     extend: {
+      colors: {
+        // dark:{
+        //   secondary: '#7928ca',
+        //   accent: '#79ffe1',
+        //   text: '#fff',
+        //   'text-secondary': '#888',
+        //   background: '#000',
+        //   'background-secondary': '#111',
+        //   'background-tertiary': '#171717',
+        //   border: '#333'
+        // }
+      },
       fontFamily:{
         sans: ['Inter', 'sans-serif'],
       },
 
-
-      keyframes: {
-        bgFillUp: {
-          '0%': { backgroundSize: '100% 0%' },
-          '100%': { backgroundSize: '100% 100%' }
-        },
-        bgFillDown: {
-          '0%': { backgroundSize: '100% 100%' },
-          '100%': { backgroundSize: '100% 0%' }
-        }
-      },
-
-      animation: {
-        bgFillUp: 'bgFillUp 0.4s forwards',
-        bgFillDown: 'bgFillDown 0.4s forwards'
-      },
     },
   },
   plugins: [],
