@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=\, initial-scale=1.0" />
@@ -22,17 +22,45 @@
 
 
   <body class="font-sans scroll-smooth m-0 p-0 pt-16 box-border">
+
+
+    <style>
+        @media (min-width: 1350px) {
+         #hero{
+          padding-left: 14rem;
+          padding-right: 14rem;
+         } 
+        }
+    </style>
     
-    <!-- Navbar starts here-->
+    <style>
+        @media (max-width: 767px) {
+         #features-boxes{
+          /* display: inline-block; */
+
+          /* display: flex;
+          justify-content: center;
+          overflow: visible */
+         } 
+        }
+    </style>
+
+
+
+
+
+
+                                              <!-- Navbar starts here-->
     <nav
       class="fixed top-0 min-w-full min-h-20 z-50 shadow-md bg-white dark:shadow-gray-900 sm:dark:shadow-gray-900 sm:dark:shadow-md flex justify-between items-center px-10 dark:bg-gray-950">
       <strong><h2 class="text-3xl dark:text-white">Jatin.dev</h2></strong>
-      <div id="navigations" class="sm:flex gap-8 hidden">
-        <a href="#" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 font-semibold dark:text-gray-50">Showcase</a>
-        <a href="#" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 font-semibold dark:text-gray-50">About</a>
-        <a href="#" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 font-semibold dark:text-gray-50">Skills</a>
-        <a href="#" class="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 font-semibold dark:text-gray-50">Contact</a>
-      </div>
+
+        <ul class="sm:flex gap-8 hidden md:text-lg">
+          <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Showcase</a></li>
+          <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">About</a></li>
+          <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Skills</a></li>
+          <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Contact</a></li>
+        </ul>
 
       <button class="theme-toggle mt-1 ml-auto mr-6 sm:ml-0 sm:mr-0 transition-transform duration-300 ease-in-out hover:scale-110 dark:text-gray-50">
         <i class="fa-solid fa-moon text-2xl"></i>
@@ -44,12 +72,14 @@
         <span class="block w-6 h-1 bg-black dark:bg-gray-50 mt-1"></span>
       </div>
     </nav>
-    <!-- navbar ends here -->
+                                              <!-- Navbar ends here -->
 
 
-    <!-- Hero sections starts here -->
-    <section class="min-h-[calc(100vh-80px)] backdrop-blur-3xl shadow-sm mt-4 w-full bg-slate-100 dark:bg-gray-950 overflow-hidden">
-      <div class="sm:py-28 sm:px-56 py-16 text-center  min-h-full w-full">
+
+
+                                              <!-- Hero section starts here -->
+    <section class="min-h-[calc(100vh-80px)] md:px-24 w-auto backdrop-blur-3xl shadow-sm mt-4 bg-slate-100 dark:bg-gray-950">
+      <div id="hero" class="sm:py-28 sm:px-8 md:px-1 lg:px-38 py-20 text-center  min-h-full w-full">
 
        <span><h1 class="text-3xl px-4 sm:text-6xl font-bold leading-snug dark:text-white">The <span class="bg-gradient-to-r from-blue-100 via-purple-300 to-teal-200 leading-snug dark:text-gray-800">FullStack Developer</span> For The Web</h1></span>
 
@@ -60,24 +90,67 @@
           <button class="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent">Learn More</button>
         </div>
 
-        <div class="min-h-fit max-w-full md:mt-16 rounded-md bg-slate-200 text-gray-950 drop-shadow-lg dark:shadow-lg dark:shadow-zinc-800 dark:bg-zinc-900 mt-8 mx-32 dark:text-gray-50">
-          <div class="flex space-x-2 h-8 pt-2 px-2 w-full rounded-t-md bg-slate-300 dark:bg-zinc-800">
+        <div class="min-h-fit mx-4 mt-16 text-wrap sm:min-w-fit rounded-md bg-slate-200 text-gray-950 drop-shadow-lg dark:shadow-lg dark:shadow-zinc-800 dark:bg-zinc-900 dark:text-gray-50">
+          <div class="flex space-x-2 h-8 pt-2 px-2 min-w-full rounded-t-md bg-slate-300 dark:bg-zinc-800">
             <span class="h-4 w-4 rounded-full bg-red-500 block"></span>
             <span class="h-4 w-4 rounded-full bg-yellow-500 block"></span>
             <span class="h-4 w-4 rounded-full bg-green-500 block"></span>
           </div>
 
-          <div class="font-mono pb-6 text-wrap pt-6"><span class="text-green-600 font-mono font-semibold">$</span> git clone https://github.com/Jatin915/Portfolio</div>
+          <div class="font-mon px-1 sm:px-3 lg:text-2xl text-lg pb-6 pt-6 tracking-wide"><span class="text-green-600 font-mono font-semibold">$</span> git clone https://github.com/Jatin915/Portfolio</div>
         </div>
 
       </div>
     </section>
-    <!-- Hero sections ends here -->
+                                              <!-- Hero section ends here -->
 
 
-    <div class="min-h-[calc(100vh-80px)] bg-slate-100">
-       <h1>The</h1>
-    </div>
+
+                                              <!-- Features section starts here -->
+    <section class="min-h-[calc(100vh-80px)] bg-slate-100 pt-32 flex flex-col items-center dark:bg-zinc-950">
+      
+      <div class="min-h-full min-w-fit text-center mb-28">
+        <h3 class="text-4xl font-bold mb-5 dark:text-white">What's in my Toolkit</h3>
+        <p class="text-gray-500 text-xl dark:text-gray-400">Everything needed to build great products on the web</p>
+      </div>
+
+      <div id="features-boxes" class="min-h-full max-w-72 sm:min-w-full flex gap-10 justify-between overflow-x-auto sm:flex sm:flex-grow sm:flex-wrap sm:justify-center sm:gap-8">
+
+        <div class="h-72 min-w-64 sm:w-64 ml-4 sm:ml-0 shadow-xl border-x-1 rounded-lg p-7 bg-slate-50 dark:bg-slate-500">
+          <span class="p-3 inline bg-blue-100 shadow-md rounded-full"><i class="fa-solid fa-paintbrush text-blue-500 text-lg"></i></span>
+          <div class="mt-8">
+            <h3 class="mb-3 text-lg font-semibold">Modern UI Design</h3>
+            <p class="text-sm text-gray-500">Creating beautiful, responsive interfaces that look great on any device using the latest design trends</p>
+          </div>
+        </div>
+
+        <div class="h-72 min-w-64 sm:w-64 shadow-xl border-x-1 rounded-lg p-7 bg-slate-50">
+          <span class="p-3 inline bg-blue-100 shadow-md rounded-full"><i class="fa-solid fa-code text-blue-500 text-lg"></i></span>
+          <div class="mt-8">
+            <h3 class="mb-3 text-lg font-semibold">Modern UI Design</h3>
+            <p class="text-sm text-gray-500">Writing maintainable, efficient code following best practices and modern development standards.</p>
+          </div>
+        </div>
+
+        <div class="h-72 min-w-64 sm:w-64 shadow-xl border-x-1 rounded-lg p-7 bg-slate-50">
+          <span class="p-3 inline bg-blue-100 shadow-md rounded-full"><i class="fa-solid fa-bolt text-blue-500 text-lg"></i></span>
+          <div class="mt-8">
+            <h3 class="mb-3 text-lg font-semibold">Modern UI Design</h3>
+            <p class="text-sm text-gray-500">Ensuring fast load times and smooth experiences through efficient code and asset optimization.</p>
+          </div>
+        </div>
+
+        <div class="h-72 min-w-64 sm:w-64 shadow-xl border-x-1 rounded-lg p-7 bg-slate-50 mr-4 sm:mr-0">
+          <span class="p-3 inline bg-blue-100 shadow-md rounded-full"><i class="fa-solid fa-mobile-screen text-blue-500 text-lg"></i></span>
+          <div class="mt-8">
+            <h3 class="mb-3 text-lg font-semibold">Modern UI Design</h3>
+            <p class="text-sm text-gray-500">Building websites that work flawlessly across all screen sizes, from phones to large displays</p>
+          </div>
+        </div>
+      </div>
+    </section>
+                                              <!-- Features section starts here -->
+
 
   </body>
 </html>
