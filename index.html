@@ -31,42 +31,6 @@
           padding-right: 14rem;
          } 
         }
-    
-        /* @media (min-width: 640px) and (max-width: 1050px) {
-
-          #about-text{
-            font-size: 1rem;
-            
-          }
-          
-          #about-left-container{
-            margin-left: 2.5rem;
-            flex: 2;
-
-          }
-
-          #about-section{
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
-            display: flex;
-            justify-content: baseline;
-            width: 100%;
-          }
-
-
-          #picture{
-            
-            height: 15rem;
-            width: 15rem;
-            flex:1;
-          } 
-         } */
-            /* margin-left: 10rem; */
-          /* display: inline-block; */
-
-          /* display: flex;
-          justify-content: center;
-          overflow: visible */
     </style>
 
 
@@ -131,14 +95,14 @@
 
 
                                               <!-- Features section starts here -->
-    <section class="min-h-[calc(100vh-80px)] bg-gray-100 pt-32 border-b-2 flex flex-col items-center dark:bg-zinc-900">
+    <section class="min-h-[calc(100vh-80px)] bg-gray-100 flex flex-col items-center dark:bg-zinc-900">
       
-      <div class="max-h-full min-w-fit text-center mb-28">
+      <div class="max-h-full min-w-fit mt-32 text-center mb-28">
         <h3 class="text-4xl font-bold mb-5 dark:text-white">What's in my Toolkit</h3>
         <p class="text-gray-500 text-xl dark:text-gray-400">Everything needed to build great products on the web</p>
       </div>
 
-      <div id="features-boxes" class="min-h-full max-w-72 sm:min-w-full pt-10 sm:pb-10 flex gap-10 justify-between overflow-x-scroll sm:overflow-hidden sm:flex sm:flex-grow sm:flex-wrap sm:justify-center sm:gap-8">
+      <div id="features-boxes" class="min-h-full max-w-72 sm:min-w-full pt-10 sm:pb-10 flex gap-10 justify-between overflow-x-scroll sm:overflow-hidden sm:flex sm:flex-grow sm:flex-wrap sm:justify-center sm:gap-8 cursor-default">
 
         <div class="h-72 min-w-64 sm:w-64 ml-4 sm:ml-0 shadow-xl border-x-1 rounded-lg p-7 bg-slate-50 dark:bg-zinc-950 dark:shadow-lg dark:shadow-zinc-800 hover:scale-105 hover:rounded-lg transition-transform duration-300 ease-in-out">
           <span class="p-3 inline bg-blue-100 dark:bg-transparent shadow-md rounded-full"><i class="fa-solid fa-paintbrush text-blue-500 text-lg"></i></span>
@@ -174,15 +138,17 @@
       </div>
     </section>
                                               <!-- Features section starts here -->
-  
-
-
-    <section id="about-section" class="min-h-[calc(100vh-80px)] min-w-full bg-slate-100 sm:flex sm:flex-row sm:justify-center sm:px-20 pt-20 pb-5 flex flex-col items-center">
+                                              
+                                              
+                                              
+                                              
+                                              <!-- About section starts here -->
+    <section id="about-section" class="min-h-[calc(100vh-80px)] min-w-full bg-slate-100 sm:flex sm:flex-row sm:justify-center sm:px-20 pt-20 pb-5 flex flex-col items-center dark:bg-gray-950">
       <div id="about-left-container" class="max-h-fit w-[80vw] sm:w-[60vw] xl:max-w-[50vw] lg:mr-32 sm:mr-16">
-        <h1 class="text-4xl font-bold mb-10">About Me</h1>
-        <p id="about-text" class="mb-10 text-lg text-gray-500">I'm a frontend developer focused on crafting clean & user-friendly experiences.</p>
-        <p id="about-text" class="mb-10 text-lg text-gray-500">I build responsive websites that are fast, easy to use, and follow best coding practices. My expertise includes HTML, CSS, JavaScript, and modern frameworks to create dynamic, engaging interfaces with clean, optimized code.</p>
-        <p id="about-text" class="text-lg text-gray-500 mb-10">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book.</p>
+        <h1 class="text-4xl font-bold mb-10 dark:text-white">About Me</h1>
+        <p id="about-text" class="mb-10 text-lg text-gray-500 dark:text-gray-400">I'm a frontend developer focused on crafting clean & user-friendly experiences.</p>
+        <p id="about-text" class="mb-10 text-lg text-gray-500 dark:text-gray-400">I build responsive websites that are fast, easy to use, and follow best coding practices. My expertise includes HTML, CSS, JavaScript, and modern frameworks to create dynamic, engaging interfaces with clean, optimized code.</p>
+        <p id="about-text" class="text-lg text-gray-500 mb-10 dark:text-gray-400">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book.</p>
         <button class="h-12 min-w-full sm:min-w-fit bg-blue-500 px-6 rounded-md text-white mr-4 mb-4 transition-transform duration-300 ease-in-out hover:scale-110">Contact Me</button>
         <button class="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent transition-transform duration-300 ease-in-out hover:scale-110">Download Resume</button>
       </div>
@@ -190,5 +156,9 @@
         <img id="picture" class="md:h-80 h-60 w-full mt-5 sm:mt-36 lg:mt-16" src="./assets/64PpIkbEsTjgI.png!sw800.png" alt="Image Here..">
       </div>
     </section>
+                                              <!-- About Section ends here -->
+
+
+    
   </body>
 </html>
