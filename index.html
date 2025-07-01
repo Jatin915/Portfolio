@@ -40,6 +40,7 @@
             flex-wrap: wrap;
             margin-bottom: 2rem;
           }
+        }
           
           #social {
             padding: 1.5rem;
@@ -53,6 +54,13 @@
               padding: 1rem;
             }
           }
+
+          @media (max-width: 700px) {
+            #Foot {
+              flex-direction: column;
+              gap: 1rem;
+              font-size: 0.8rem;
+            }
         }
     </style>
 
@@ -66,10 +74,11 @@
       class="fixed top-0 min-w-full min-h-20 z-50 shadow-md bg-white dark:shadow-gray-900 sm:dark:shadow-gray-900 sm:dark:shadow-md flex justify-between items-center px-10 dark:bg-gray-950">
       <strong><h2 class="text-3xl dark:text-white">Jatin.dev</h2></strong>
 
-        <ul class="sm:flex gap-8 hidden md:text-lg">
+        <ul class="sm:flex sm:text-sm sm:gap-6 md:gap-8 hidden md:text-lg">
           <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Showcase</a></li>
           <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">About</a></li>
           <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Skills</a></li>
+          <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Projects</a></li>
           <li class="transition-transform duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Contact</a></li>
         </ul>
 
@@ -351,6 +360,33 @@
       </div>
     </section>
 
+
+
+
+    <footer class="py-10 sm:px-16 bg-slate-200">
+      <div id="Foot" class="flex items-center justify-between">
+        
+        <div><strong><h2 class="text-3xl dark:text-white">Jatin.dev</h2></strong></div>
+        
+        <div>
+          <ul class="flex gap-3 sm:gap-4 md:gap-6 text-gray-500 text-sm sm:text-[1rem]">
+            <li><a href="">Showcase</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="flex gap-4">
+          <i class="fa-brands fa-github text-md text-gray-600"></i>
+          <i class="fa-brands fa-linkedin text-gray-600"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+      
+      <p class="text-gray-500 text-sm text-center mt-5">@2025 gJatin Portfolio. All rights reserved.</p>
+    </footer>
 
 
   </body>
