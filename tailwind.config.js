@@ -4,6 +4,7 @@ module.exports = {
   content: ["*.html"],
   theme: {
     extend: {
+
       colors: {
         // dark:{
         //   secondary: '#7928ca',
