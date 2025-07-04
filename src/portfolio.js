@@ -26,3 +26,48 @@ function DarkTheme() {
         icon.classList.replace('fa-moon', 'fa-sun');
     }
 }
+
+
+// Terminal Content functionality
+const texts = [
+    "git clone https://github.com/Jatin915/Portfolio",
+    "https://in.linkedin.com/",
+    "https://instagram.com/"
+  ];
+
+  const target = document.querySelector("#typing-text");
+  let i = 0;
+  let char = 0;
+
+function type() {
+    document.querySelector("#terminal-blinking-cursor").classList.remove('blinking-cursor');
+    if(i == 3)
+        i=0;
+
+    if(char < texts[i].length){
+        target.textContent += texts[i].charAt(char);
+        char++;
+        setTimeout(type, 100);
+    }
+    else{
+        document.querySelector("#terminal-blinking-cursor").classList.add('blinking-cursor');
+        setTimeout(() => {
+            erase();
+        }, 3000);
+    }
+}
+
+function erase() {
+    document.querySelector("#terminal-blinking-cursor").classList.remove('blinking-cursor');
+    if(char > 0){
+        target.textContent = target.textContent.slice(0, char-1);
+        char--;
+        setTimeout(erase, 50);
+    }
+    else{
+        i++;
+        document.querySelector("#terminal-blinking-cursor").classList.add('blinking-cursor');
+        setTimeout(type, 2000);
+    }
+}
+document.addEventListener('DOMContentLoaded', type);
