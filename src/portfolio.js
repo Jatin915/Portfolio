@@ -1,3 +1,4 @@
+// Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const SystemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const icon = document.querySelector('#Moon');
@@ -11,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.classList.replace('fa-sun', 'fa-moon');
     }
 })
-
 
 function DarkTheme() {
     const isDark = document.documentElement.classList.contains('dark');

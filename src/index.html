@@ -20,9 +20,55 @@
     />
   </head>
 
-  <body class="font-sans scroll-smooth m-0 p-0 pt-16 box-border">
+  <body class="font-sans m-0 p-0 pt-16 box-border">
 
     <style>
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+
+
+
+/* For Webkit-based browsers (Chrome, Edge, Safari) */
+/* For Webkit-based browsers (Chrome, Edge, Safari) */
+#features-boxes::-webkit-scrollbar {
+  height: 8px; /* for horizontal scrollbar */
+}
+
+#features-boxes::-webkit-scrollbar-thumb {
+  background-color: #60a5fa; /* Tailwind blue-400 */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+#features-boxes::-webkit-scrollbar-thumb:hover {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+}
+
+@media (prefers-color-scheme: dark) {
+  #features-boxes::-webkit-scrollbar-thumb {
+    background-color: #2070e0; /* Tailwind slate-400 */
+  }
+
+  #features-boxes::-webkit-scrollbar-thumb:hover {
+    background-color: #085fc8; /* Tailwind slate-300 */
+  }
+}
+
+
+
+
+
+
+        @media (min-width: 640px) {
+          #btn:hover {
+            transform: scale(1.1);
+          }
+        }
+
         @media (min-width: 1350px) {
          #hero{
           padding-left: 14rem;
@@ -65,18 +111,18 @@
 
                                               <!-- Navbar starts here-->
     <nav
-      class="fixed top-0 min-w-full min-h-20 z-50 shadow-md bg-white dark:shadow-gray-900 sm:dark:shadow-gray-900 sm:dark:shadow-md flex justify-between items-center px-10 dark:bg-gray-950 transition duration-300">
-      <strong><h2 class="text-3xl dark:text-white transition duration-300">Jatin.dev</h2></strong>
+      class="fixed top-0 w-full pt-6 pb-5 z-50 shadow-md bg-white dark:shadow-gray-900 sm:dark:shadow-gray-900 sm:dark:shadow-md flex justify-between items-center px-10 dark:bg-gray-950 transition duration-300">
+      <a href="#hero"><strong><h2 class="text-3xl dark:text-white transition duration-300">Jatin.dev</h2></strong></a>
 
         <ul class="sm:flex sm:text-sm sm:gap-6 md:gap-8 hidden md:text-lg">
-          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Showcase</a></li>
-          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">About</a></li>
-          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Skills</a></li>
-          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Projects</a></li>
-          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#" class="cursor-pointer font-semibold dark:text-gray-50">Contact</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#showcase" class="cursor-pointer font-semibold dark:text-gray-50">Showcase</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#about" class="cursor-pointer font-semibold dark:text-gray-50">About</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#skills" class="cursor-pointer font-semibold dark:text-gray-50">Skills</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#projects" class="cursor-pointer font-semibold dark:text-gray-50">Projects</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#contact" class="cursor-pointer font-semibold dark:text-gray-50">Contact</a></li>
         </ul>
 
-      <button onclick="DarkTheme()" class="mt-1 ml-auto mr-6 sm:ml-0 sm:mr-0 text-2xl transition-transform duration-300 ease-in-out hover:scale-110 dark:text-gray-50">
+      <button id="btn" onclick="DarkTheme()" class="mt-1 ml-auto mr-6 sm:ml-0 sm:mr-0 text-2xl transition-transform duration-300 ease-in-out cursor-pointer dark:text-gray-50">
         <i id="Moon" class="fa-solid fa-moon"></i>
       </button>
 
@@ -91,26 +137,29 @@
 
 
                                               <!-- Hero section starts here -->
-    <section class="min-h-[calc(100vh-80px)] md:px-24 w-auto backdrop-blur-3xl shadow-sm mt-4 bg-slate-100 dark:bg-gray-950 transition duration-300">
-      <div id="hero" class="sm:py-28 sm:px-8 md:px-1 lg:px-38 py-20 text-center  min-h-full w-full">
+    <section id="hero" class="min-h-[calc(100vh-80px)] md:px-24 w-auto backdrop-blur-3xl shadow-sm mt-4 bg-slate-100 dark:bg-gray-950 transition duration-300">
+      <div class="sm:py-28 sm:px-8 md:px-1 lg:px-38 py-20 text-center  min-h-full w-full">
 
        <span><h1 class="text-3xl px-4 sm:text-6xl font-bold leading-snug dark:text-white transition duration-300">The <span class="bg-gradient-to-r from-blue-100 via-purple-300 to-teal-200 leading-snug dark:text-gray-800 transition duration-300">FullStack Developer</span> For The Web</h1></span>
 
         <p class="mt-16 text-md sm:text-2xl px-4 text-gray-600 dark:text-gray-400 transition duration-300">Creating <strong class="dark:text-gray-300 transition duration-300">high-quality web applications</strong> with modern tools and best practices for exceptional user experiences.</p>
 
         <div class="sm:min-h-28 sm:min-w-full pt-20 sm:pt-10 px-4">
-          <button class="h-12 min-w-full sm:min-w-fit bg-blue-500 px-6 rounded-md text-white mr-4 mb-4 transition-transform duration-300 ease-in-out hover:scale-110">View Projects</button>
-          <button class="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent transition-all duration-300 ease-in-out hover:scale-110">Learn More</button>
+          <a href="#projects"><button id="btn" class="h-12 min-w-full sm:min-w-fit bg-blue-500 px-6 rounded-md text-white mr-4 mb-4 transition-transform duration-300 ease-in-out">View Projects</button></a>
+          <a href="#about"><button id="btn" class="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent transition-all duration-300 ease-in-out">Learn More</button></a>
         </div>
 
-        <div class="min-h-fit mx-4 mt-16 text-wrap sm:min-w-fit rounded-md bg-slate-200 text-gray-950 drop-shadow-lg dark:shadow-lg dark:shadow-zinc-800 dark:bg-zinc-900 dark:text-gray-50 transition duration-300">
+        <div class="min-h-fit mx-4 mt-16 text-wrap sm:w-fit rounded-md bg-slate-200 text-gray-950 drop-shadow-lg dark:shadow-lg dark:shadow-zinc-800 dark:bg-zinc-900 dark:text-gray-50 transition duration-300">
           <div class="flex space-x-2 h-8 pt-2 px-2 min-w-full rounded-t-md bg-slate-300 dark:bg-zinc-800 transition duration-300">
             <span class="h-4 w-4 rounded-full bg-red-500 block"></span>
             <span class="h-4 w-4 rounded-full bg-yellow-500 block"></span>
             <span class="h-4 w-4 rounded-full bg-green-500 block"></span>
           </div>
 
-          <div class="font-mon px-1 sm:px-3 lg:text-2xl text-lg pb-6 pt-6 tracking-wide"><span class="text-green-600 font-mono font-semibold">$</span> git clone https://github.com/Jatin915/Portfolio</div>
+          <div class="font-mon px-1 sm:px-3 lg:text-2xl text-lg pb-6 pt-6 tracking-wide">
+            <span class="text-green-600 font-mono font-semibold transition-all ease-in-out">$</span>
+            <span id="typing-text"></span><span class="blinking-cursor animate-pulse">|</span>
+          </div>
         </div>
 
       </div>
@@ -120,7 +169,7 @@
 
 
                                               <!-- Features section starts here -->
-    <section class="min-h-[calc(100vh-80px)] bg-gray-100 flex flex-col items-center dark:bg-zinc-900 transition duration-300">
+    <section id="showcase" class="min-h-[calc(100vh-80px)] bg-gray-100 flex flex-col items-center dark:bg-zinc-900 transition duration-300">
       
       <div class="max-h-full min-w-fit mt-32 text-center mb-28">
         <h3 class="text-4xl font-bold mb-5 dark:text-white transition duration-300">What's in my Toolkit</h3>
@@ -168,14 +217,14 @@
                                               
                                               
                                               <!-- About section starts here -->
-    <section id="about-section" class="min-h-[calc(100vh-80px)] min-w-full backdrop-blur-3xl shadow-sm bg-slate-100 sm:flex sm:flex-row sm:justify-center sm:px-20 pt-20 pb-5 flex flex-col items-center dark:bg-gray-950 transition duration-300">
+    <section id="about" class="min-h-[calc(100vh-80px)] min-w-full backdrop-blur-3xl shadow-sm bg-slate-100 sm:flex sm:flex-row sm:justify-center sm:px-20 pt-20 pb-5 flex flex-col items-center dark:bg-gray-950 transition duration-300">
       <div id="about-left-container" class="max-h-fit w-[80vw] sm:w-[60vw] xl:max-w-[50vw] lg:mr-32 sm:mr-16">
         <h1 class="text-4xl font-bold mb-10 dark:text-white transition duration-300">About Me</h1>
         <p id="about-text" class="mb-10 text-lg text-gray-500 dark:text-gray-400 transition duration-300">I'm a frontend developer focused on crafting clean & user-friendly experiences.</p>
         <p id="about-text" class="mb-10 text-lg text-gray-500 dark:text-gray-400 transition duration-300">I build responsive websites that are fast, easy to use, and follow best coding practices. My expertise includes HTML, CSS, JavaScript, and modern frameworks to create dynamic, engaging interfaces with clean, optimized code.</p>
         <p id="about-text" class="text-lg text-gray-500 mb-10 dark:text-gray-400 transition duration-300">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book.</p>
-        <button class="h-12 min-w-full sm:min-w-fit bg-blue-500 px-6 rounded-md text-white mr-4 mb-4 transition-transform duration-300 ease-in-out hover:scale-110">Contact Me</button>
-        <button class="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent transition-all duration-300 ease-in-out hover:scale-110">Download Resume</button>
+        <button id="btn" class="h-12 min-w-full sm:min-w-fit bg-blue-500 px-6 rounded-md text-white mr-4 mb-4 transition-transform duration-300 ease-in-out">Contact Me</button>
+        <button id="btn" class="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent transition-all duration-300 ease-in-out">Download Resume</button>
       </div>
       <div class="max-h-fit w-[60vw] sm:w-[40vw] xl:max-w-fit">
         <img id="picture" class="md:h-80 h-60 w-full mt-5 sm:mt-36 lg:mt-16" src="../assets/64PpIkbEsTjgI.png!sw800.png" alt="Image Here..">
@@ -186,9 +235,8 @@
 
 
 
-
                                               <!-- Skills Section starts here -->
-    <section class="min-h-[calc(100vh-80px)] min-w-full bg-zinc-100 px-5 dark:bg-zinc-900 transition duration-300">
+    <section id="skills" class="min-h-[calc(100vh-80px)] min-w-full bg-zinc-100 px-5 dark:bg-zinc-900 transition duration-300">
       <div class="min-w-full max-h-fit text-center p-11 pt-16">
         <h1 class="text-4xl font-bold mb-5 dark:text-white transition duration-300">My Skills</h1>
         <p class="text-gray-500 text-xl dark:text-gray-400 mb-10 sm:mb-20 transition duration-300">Technologies and tool I use to bring products to life</p>
@@ -249,8 +297,9 @@
 
 
 
+
                                               <!-- Projects section starts here -->
-    <section class="min-h-[calc(100vh-80px)] min-w-full bg-slate-100 dark:bg-gray-950 backdrop-blur-3xl shadow-sm transition duration-300">
+    <section id="projects" class="min-h-[calc(100vh-80px)] min-w-full bg-slate-100 dark:bg-gray-950 backdrop-blur-3xl shadow-sm transition duration-300">
 
       <div class="min-w-full max-h-fit text-center p-11 pt-16">
         <h1 class="text-3xl sm:text-4xl font-bold mb-5 dark:text-white transition duration-300">Featured Projects</h1>
@@ -268,8 +317,8 @@
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">HTML5</span>
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">CSS3</span>
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">JavaScript</span>
-          <button class="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out hover:scale-110">Youtube</button>
-          <button class="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out hover:scale-110"><i class="fa-brands fa-github mr-2"></i>Code</button>
+          <button id="btn" class="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out">Youtube</button>
+          <button id="btn" class="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out"><i class="fa-brands fa-github mr-2"></i>Code</button>
         </div>
         </div>
         <!-- First Skill card ends here -->
@@ -283,8 +332,8 @@
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">HTML5</span>
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">CSS3</span>
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">JavaScript</span>
-          <button class="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out hover:scale-110">Youtube</button>
-          <button class="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out hover:scale-110"><i class="fa-brands fa-github mr-2"></i>Code</button>
+          <button id="btn" class="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out">Youtube</button>
+          <button id="btn" class="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out"><i class="fa-brands fa-github mr-2"></i>Code</button>
         </div>
         </div>
         <!-- Second Skill card ends here -->
@@ -298,8 +347,8 @@
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">HTML5</span>
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">CSS3</span>
           <span class="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">JavaScript</span>
-          <button class="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out hover:scale-110">Youtube</button>
-          <button class="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out hover:scale-110"><i class="fa-brands fa-github mr-2"></i>Code</button>
+          <button id="btn" class="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out">Youtube</button>
+          <button id="btn" class="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out"><i class="fa-brands fa-github mr-2"></i>Code</button>
         </div>
         </div>
         <!-- Third Skill card ends here -->
@@ -308,8 +357,10 @@
                                               <!-- Projects section starts here -->
 
 
+
+
                                               <!-- Contact page starts here -->
-    <section class="min-h-[calc(100vh-80px)] min-w-full bg-zinc-100 px-5 dark:bg-zinc-900 md:px-15 py-10 transition duration-300">
+    <section id="contact" class="min-h-[calc(100vh-80px)] min-w-full bg-zinc-100 px-5 dark:bg-zinc-900 md:px-15 py-10 transition duration-300">
       <h1 class="text-3xl sm:text-4xl font-bold mb-5 dark:text-white text-center transition duration-300">Get In Touch</h1>
       <p class="text-gray-500 text-md sm:text-xl dark:text-gray-400 mb-10 sm:mb-10 md:mb-4 text-center transition duration-300">Instead of working together? Lets connect</p>
 
@@ -356,6 +407,8 @@
                                               <!-- Contact page ends here -->
 
 
+
+
                                               <!-- Footer starts here -->
     <footer class="py-10 sm:px-16 bg-slate-200 dark:bg-zinc-950 transition duration-300">
       <div id="Foot" class="flex items-center justify-between">
@@ -364,11 +417,11 @@
         
         <div>
           <ul class="flex gap-3 sm:gap-4 md:gap-6 text-gray-700 dark:text-gray-400 text-sm sm:text-[1rem] transition duration-300">
-            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="">Showcase</a></li>
-            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="">About</a></li>
-            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="">Skills</a></li>
-            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="">Projects</a></li>
-            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="">Contact</a></li>
+            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="#showcase">Showcase</a></li>
+            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="#about">About</a></li>
+            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="#skills">Skills</a></li>
+            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="#projects">Projects</a></li>
+            <li class="transition-colors duration-300 ease-in-out dark:md:hover:text-gray-200"><a href="#contact">Contact</a></li>
           </ul>
         </div>
         
