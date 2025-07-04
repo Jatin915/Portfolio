@@ -119,6 +119,20 @@
             opacity: 1;
           }
         }
+
+
+        #links{
+          flex-grow: 1;
+        }
+        #menu-container {
+          transform: translateX(100vw);
+          transition: transform 0.4s ease-in-out;
+
+              background: rgba(0, 0, 0, 0.1); /* semi-transparent */
+              backdrop-filter: blur(15px);          /* blur background behind */
+              -webkit-backdrop-filter: blur(1px);  /* Safari support */
+              border: 1px solid rgba(123, 123, 123, 0.1);
+          }
     </style>
 
 
@@ -148,6 +162,29 @@
 
 
 
+
+
+                                              <!-- Menu Toggle For Mobile starts here -->
+    <div id="menu-container" class="min-h-full w-full fixed top-0 z-50 p-5 flex flex-col justify-between transition-all duration-300">
+      <div class="flex justify-between items-center">
+        <a onclick="menuClose()" href="#hero"><strong><h2 class="text-2xl dark:text-white transition duration-300">Jatin.dev</h2></strong></a>
+        <button onclick="menuClose()" class="text-black dark:text-white transition duration-300 h-fit "><h1 class="text-2xl">X</h1></button>
+      </div>
+
+      <div id="links" class="w-full flex justify-center items-center">
+        <ul class=" flex flex-col gap-10 items-center text-xl">
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#showcase" class="cursor-pointer font-semibold dark:text-gray-50">Showcase</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#about" class="cursor-pointer font-semibold dark:text-gray-50">About</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#skills" class="cursor-pointer font-semibold dark:text-gray-50">Skills</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#projects" class="cursor-pointer font-semibold dark:text-gray-50">Projects</a></li>
+          <li class="transition-all duration-300 ease-in-out hover:scale-110"><a href="#contact" class="cursor-pointer font-semibold dark:text-gray-50">Contact</a></li>
+        </ul>
+      </div>
+    </div>                                              
+                                              <!-- Menu Toggle For Mobile ends here -->
+
+
+                                              
 
                                               <!-- Hero section starts here -->
     <section id="hero" class="min-h-[calc(100vh-80px)] md:px-24 w-auto backdrop-blur-3xl shadow-sm mt-4 bg-slate-100 dark:bg-gray-950 transition duration-300">

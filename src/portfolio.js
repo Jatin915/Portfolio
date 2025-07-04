@@ -71,3 +71,17 @@ function erase() {
     }
 }
 document.addEventListener('DOMContentLoaded', type);
+
+
+// Mobile Menu Toggle Functionality
+const menu = document.querySelector('#menu-container');
+const Links = document.querySelector('#menu-container ul');
+
+function menuToggle() {
+    menu.style.transform = 'translateX(0vw)';
+}
+
+function menuClose() {
+    menu.style.transform = 'translateX(100vw)';
+}
+Links.addEventListener("click", menuClose);
